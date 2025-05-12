@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shape Controls UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Shape Controls</h2>
+    <button id="resetBtn">Reset Shape</button>
+
+    <!-- ROTATE -->
+    <div class="control-group" id="rotateGroup">
+      <label> Rotate </label>
+      <div class="dial" id="rotateDial">
+        <div class="dial-handle"></div>
+      </div>
+      <div class="fine-tune">
+        <input type="number" id="rotateInput" value="90" step="1" />°
+        <button id="rotateApply">Apply</button>
+      </div>
+    </div>
+
+    <!-- TRANSLATE (unchanged) -->
+    <div class="control-group" id="translateGroup">
+      <label>↔Translate</label>
+      <div>
+        ΔLng: <input type="number" id="transLng" value="0.5" step="0.1" />°
+        ΔLat: <input type="number" id="transLat" value="0.5" step="0.1" />°
+      </div>
+      <button id="translateApply">Apply</button>
+    </div>
+
+    <!-- REFLECT (unchanged) -->
+    <div class="control-group" id="reflectGroup">
+      <label> Reflect</label>
+      <div class="radio-group">
+        <label><input type="radio" name="axis" value="vertical" checked />Vertical</label>
+        <label><input type="radio" name="axis" value="horizontal" />Horizontal</label>
+      </div>
+      <button id="reflectApply">Apply</button>
+    </div>
+
+    <!-- DILATE -->
+    <div class="control-group" id="dilateGroup">
+      <label> Dilate</label>
+      <div class="dilate-controls">
+        <button id="dilateMinus">−</button>
+        <input type="number" id="dilateInput" value="1.5" step="0.1" />×
+        <button id="dilatePlus">+</button>
+      </div>
+      <button id="dilateApply">Apply</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
